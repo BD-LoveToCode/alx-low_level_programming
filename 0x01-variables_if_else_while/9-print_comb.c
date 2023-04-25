@@ -1,21 +1,37 @@
 #include <stdio.h>
+
 /**
- * main - prints all combination of single digits
- * Return: Always 0
+ * main - print combinations of two numbers
+ *Return: 0 on Success
  */
+
 int main(void)
 {
-	int n;
+	int i = '0';
+	int j = '0';
 
-	for (n = 48; n < 58; n++)
+	while(i <= '9')
 	{
-		putchar(n);
-		if (n != 57)
+		while(j <= '9')
 		{
-			putchar(',');
-			putchar(' ');
+			if(!(i > j) || i == j)
+			{
+				putchar(i);
+				putchar(j);
+				if (i == '8' && j == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			j++
 		}
+		j = '0';
+		i++;
 	}
-	putchar('\n');
 	return (0);
 }
