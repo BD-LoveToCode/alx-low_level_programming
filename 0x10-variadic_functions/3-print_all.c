@@ -5,7 +5,7 @@
 
 /**
  * print_all - prints all
- * @format: Types of argument list 
+ * @format: Types of argument list
  */
 void print_all(const char * const format, ...)
 {
